@@ -24,8 +24,8 @@ class ProdutoController extends Controller
         
        /// return response()->json($produto = $this->produto->paginate(2), 200);
 
-        $produtos = $this->produto->paginate(1);
-        return response()->json($produtos, 200);
+       $produtos = $this->produto->orderByDesc('id')->paginate(10);
+       return response()->json($produtos, 200);
 
     }
 

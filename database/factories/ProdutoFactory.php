@@ -17,7 +17,15 @@ class ProdutoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'descricao' => strtoupper($this->faker->unique()->word),
+            'marca' => strtoupper($this->faker->word),
+            'modelo' => strtoupper($this->faker->word),
+            'referencia' => strtoupper($this->faker->word),
+            'minimo' => $this->faker->randomNumber($nbDigits = 2, $strict = false),
+            'maximo' => $this->faker->randomNumber($nbDigits = 2, $strict = false),
+            'saldo' => $this->faker->randomNumber($nbDigits = 3, $strict = false),
+            'endereco' => strtoupper($this->faker->word),
+            'valor' => $this->faker->randomNumber($nbDigits = 4, $strict = false),
         ];
     }
 }
