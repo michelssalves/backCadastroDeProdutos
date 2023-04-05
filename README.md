@@ -1,3 +1,22 @@
+## Project setup
+
+composer install
+
+criar copia do arquivo .env.example e renomear para .env e deixar as seguintes configuraçoes
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=estoque
+DB_USERNAME=root
+DB_PASSWORD=
+
+php artisan migrate
+
+executar comando php artisan serve --port=1000  
+
+colocar pasta frontCadastroDeProdutos no server port=8000
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
